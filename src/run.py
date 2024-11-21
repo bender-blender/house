@@ -1,19 +1,21 @@
-from builders import (
-    BuilderApartment,
-    BuilderCottage)
-
 from director import (
-    DirectorApartament,
-    DirectorCottage
-)
+    CottageDirector,
+    ApartamentDirector,
+    ManorDirector)
 
 
+cottage = CottageDirector()
+res = cottage.build()
+print(res)
 
-apartment = BuilderApartment()
-build = DirectorApartament(apartment)
-print(build.construct_apartament())
 print()
 
-cottage = BuilderCottage()
-build = DirectorCottage(cottage)
-print(build.construct_cottage())
+apartament = ApartamentDirector()
+res = apartament.build()
+print(res)
+
+print()
+
+manor = ManorDirector()
+res = manor.build()
+print(res)
